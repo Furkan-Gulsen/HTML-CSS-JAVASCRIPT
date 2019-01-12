@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="animeBut.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+    <div class="container">
+
+        <form class="toggle">
+
+            <input type="radio" id="but1" name="but" />
+            <label for="but1">True</label>
+
+            <input type="radio" id="but2" name="but" />
+            <label for="but2">Codes</label>
+
+            <div id="flap"><span class="content">true</span></div>
+
+        </form>
+    </div>
+
+    <script>
+
+        let st = {};
+
+        st.flap = document.querySelector("#flap");
+        st.toggle = document.querySelector(".toggle");
+
+        st.but1 = document.querySelector("#but1");
+        st.but2 = document.querySelector("#but2"); 
+
+        st.flap.addEventListener("transitionend", () => {
+
+            if (st.but1.checked) {
+                st.toggle.style.transform = "rotateY(-15deg)";
+                setTimeout(() => st.toggle.style.transform = "", 400);
+            } else {
+                st.toggle.style.transform = "rotateY(15deg)";
+                setTimeout(() => st.toggle.style.transform = "", 400)
+            }
+
+        })
+
+        st.clickHandler = (e) => {
+            if (e.target.tagName === "LABEL") {
+                setTimeout(() => {
+                    st.flap.children[0].textContent = e.target.textContent;},250);
+                }
+            }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            st.flap.children[0].textContent = st.but2.nextElementSibling.textContent;
+        });
+        document.addEventListener("click",(e)=>st.clickHandler(e))
+
+    </script>
+
+
+</body>
+</html>
