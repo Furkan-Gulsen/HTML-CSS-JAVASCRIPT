@@ -1,0 +1,104 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background:#262626;
+    padding-bottom:10%;
+}
+
+h1{
+    text-align: center;
+    margin: 20% 0 5%;
+    font-family: 'AR DARLING';
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #e4e4e4;
+}
+
+#radio_buttons{
+    position:relative;
+    width:50%;
+    margin:0 auto;
+}
+
+input[type="radio"]{
+    position:absolute;
+    right:1000%;
+}
+
+label {
+    float: left;
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 0 2.5%;
+    background: rgba(0,0,0,.3);
+    border-radius:20%;
+    cursor:pointer;
+}
+
+#slider {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 10%;
+    padding-bottom: 10%;
+    margin: 2.5% 0 0 5%;
+    background: #e4e4e4 ;
+    transition: transform 1s;
+    border-radius: 50%;
+    animation: .3s forwards ease-in-out;
+    transition: 0.2s left .05s ease-in-out;
+}
+
+
+#input1:checked ~ #slider {
+    animation-name: input1;
+    left: 0;
+}
+
+#input2:checked ~ #slider {
+    animation-name: input2;
+    left: 20%;
+}
+
+#input3:checked ~ #slider {
+    animation-name: input3;
+    left: 40%;
+}
+
+#input4:checked ~ #slider {
+    animation-name: input4;
+    left: 60%;
+}
+
+#input5:checked ~ #slider {
+    animation-name: input5;
+    left: 80%;
+}
+@keyframes input1 {
+    30%, 70% {
+        transform: scale(0.5);
+    }
+}
+
+
+@keyframes input2 {
+    30%, 70% {
+        transform: scale(0.5);
+    }
+}
+@keyframes input3 {
+    30%, 70% {
+        transform: scale(0.5);
+    }
+}
+@keyframes input4 {
+    30%, 70% {
+        transform: scale(0.5);
+    }
+}
+@keyframes input5 {
+    30%, 70% {
+        transform: scale(0.5);
+    }
+}
