@@ -1,0 +1,94 @@
+body{
+    height:100%;
+    margin:0;
+    background-color:#1a1a1a;
+}
+
+.menu-place {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width:300px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.menu-but{
+    width:300px;
+    overflow:hidden;
+}
+#menu-check {
+    display: none;
+}
+.menu-label{
+    position:relative;
+    display:block;
+    height:100px;
+    cursor:pointer;
+}
+.menu-label:before, .menu-label:after, .menu-text{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:20px;
+    background:#c95900
+}
+.menu-label:before, .menu-label:after{
+    content:"";
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+}
+.menu-label:before{
+    top:0;
+}
+.menu-label:after{
+    top:40px
+}
+.menu-text{
+    top:80px
+}
+.menu-text:before{
+    content:"TRUE CODES";
+    position:absolute;
+    top:20px;
+    right:0;
+    left:0;
+    color:#c95900;
+    font-size:40px;
+    font-weight:bold;
+    font-family:sans-serif;
+    text-align:center;
+}
+#menu-check:checked + .menu-label:before {
+    left: -300px;
+}
+#menu-check:checked + .menu-label:after {
+    left: 300px;
+}
+#menu-check:checked + .menu-label .menu-text:before {
+    animation: moveUpThenDown 0.8s ease 0.2s forwards, 
+        shakeWhileMovingUp 0.8s ease 0.2s forwards, 
+        shakeWhileMovingDown 0.2s ease 0.8s forwards;
+}
+
+@keyframes moveUpThenDown
+{
+    0%{ top:0; }
+    50%{ top:-65px;}
+    100%{ top:-45px; }
+}
+
+@keyframes shakeWhileMovingUp
+{
+    0%{ transform: rotateZ(0); }
+    25%{ transform:rotateZ(-16deg); }
+    50%{ transform:rotateZ(0deg); }
+    75%{ transform:rotateZ(16deg); }
+    100%{ transform:rotateZ(0); }
+}
+@keyframes shakeWhileMovingDown
+{
+    0%{ transform:rotateZ(0); }
+    80%{ transform:rotateZ(4deg); }
+    90%{ transform:rotateZ(-4deg); }
+    100%{ transform:rotateZ(0); }
+}
