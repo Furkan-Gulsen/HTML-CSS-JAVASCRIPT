@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    padding:0;
+}
+#container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #3c005b;
+    background: -webkit-radial-gradient(center, ellipse cover, #4e4343 1%,#1a1a1a   100%);
+    background: -moz-radial-gradient(center, ellipse cover, ##333333 1%,#0d0011 100%);
+}
+#bot-container {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 34vh;
+    height: 34vh;
+    margin-left: -17vh;
+    margin-top: -17vh;
+    overflow: hidden;
+    transition: background-color 500ms;
+    cursor: pointer;
+}
+#text {
+    position: absolute;
+    left: 2vh;
+    top: 2vh;
+    width: 30vh;
+    height: 30vh;
+    background: linear-gradient(135deg, #333333 0%,#1a1a1a 100%);
+    font-family: Trebuchet MS;
+    font-size: 20vh;
+    font-weight: bold;
+    color: #aa9600;
+    text-align: center;
+    line-height: 30vh;
+}
+.loader {
+    display: block;
+    position: absolute;
+    background-color: #aa9600;
+}
+.a1 {
+    left: 2vh;
+    top: 0;
+    height: 2vh;
+    width: 0;
+    animation: ani1 1s linear forwards infinite;
+}
+.a2 {
+    right: 0;
+    top: 2vh;
+    width: 2vh;
+    height: 0;
+    animation: ani2 1s linear forwards infinite;
+    animation-delay: 0.5s;
+}
+.a3 {
+    right: 2vh;
+    bottom: 0;
+    height: 2vh;
+    width: 0;
+    animation: ani3 1s linear forwards infinite;
+}
+.a4 {
+    left: 0;
+    bottom: 2vh;
+    width: 2vh;
+    height: 0;
+    animation: ani4 1s linear forwards infinite;
+    animation-delay: 0.5s;
+}
+@keyframes ani1{
+  50%{width:32vh; margin-left:0;}
+  100%{margin-left:32vh;}
+}
+
+@keyframes ani2{
+  50%{height:32vh; margin-top:0;}
+  100%{margin-top:32vh;}
+}
+
+@keyframes ani3{
+  50%{width:32vh; margin-right:0;}
+  100%{margin-right:32vh;}
+}
+
+@keyframes ani4{
+  50%{height:32vh; margin-bottom:0}
+  100%{margin-bottom:32vh;}
+}
