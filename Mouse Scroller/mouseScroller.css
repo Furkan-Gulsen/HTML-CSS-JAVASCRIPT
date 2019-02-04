@@ -1,0 +1,42 @@
+body{
+    background: #262626;
+}
+#container{
+    display:flex;
+    align-content:center;
+}
+#scroll-down{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:auto;
+}
+#mouse {
+    width: 20px;
+    height: 100px;
+    padding: 150px 100px;
+    border: 10px solid #ff6a00;
+    border-radius:120px;
+}
+#scroller{
+    width:25px;
+    height:50px;
+    background:#ff6a00;
+    border-radius:20px;
+    opacity:0.9;
+    animation:ani 1s linear infinite;
+    animation-direction:alternate;
+}
+@keyframes ani{
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-125px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-125px);
+    }
+}
