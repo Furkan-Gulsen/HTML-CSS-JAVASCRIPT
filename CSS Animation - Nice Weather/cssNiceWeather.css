@@ -1,0 +1,204 @@
+﻿body, html {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
+    background: linear-gradient(#5d3355, #b97079, #a097ab, #fdf090)
+}
+.sun {
+    background: lemonchiffon;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+.clouds{
+    background: #5d3355;
+    display: flex;
+    width: 100px;
+    height: 30px;
+    opacity: .8;
+    position: absolute;
+    top: 60%;
+    left: 120%;
+}
+.clouds .cloud{
+    position: relative;
+    width: auto;
+}
+.clouds .cloud:before{
+    content: "";
+    background: #5d3355;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -12px;
+}
+.clouds .c2:before{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    bottom: 5px;
+    left: 2px;
+}
+.clouds .c3:before{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    bottom: 17px;
+    left: 18px;
+}
+.clouds .c4:before{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    bottom: 12px;
+    left: 42px;
+}
+.clouds .c5:before{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    bottom: 0px;
+    left: 75px;
+}
+.clouds.bigger{
+      -webkit-animation: float 12s 0s infinite alternate linear;
+          animation: float 12s 0s infinite alternate linear;
+}
+.clouds.medium{
+    top: 42%;
+    height: 24px;
+    width: 92px;
+      -webkit-animation: float 16s 5s infinite alternate linear;
+          animation: float 16s 5s infinite alternate linear;
+}
+.clouds.medium .cloud{
+    position: relative;
+    width: auto;
+}
+.clouds.medium .cloud:before{
+    height: 24px;
+    width: 24px;
+    border-radius: 25px;
+    bottom: 0;
+    left: -12px;
+}
+.clouds.medium .c2:before{
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    bottom: 5px;
+    left: 2px;
+}
+.clouds.medium .c3:before{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    bottom: 4px;
+    left: 18px;
+}
+.clouds.medium .c4:before{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    bottom: 22px;
+    left: 58px;
+}
+.clouds.medium .c5:before{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    bottom: 12px;
+    left: 73px;
+}
+.clouds.medium .c6:before{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    bottom: 0px;
+    left: 82px;
+}
+.clouds.smaller{
+    top: 26%;
+    height: 18px;
+    width: 61px;
+    -webkit-animation: float 16s 4s infinite alternate linear;
+            animation: float 16s 4s infinite alternate linear;
+}
+.clouds.smaller .cloud{
+    position: relative;
+    width: auto;
+}
+.clouds.smaller .cloud:before{
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    bottom: 0;
+    left: -10px;
+}
+.clouds.smaller .c2:before{
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    bottom: 11px;
+    left: 2px;
+}
+.clouds.smaller .c3:before{
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    bottom: 8px;
+    left: 13px;
+}
+.clouds.smaller .c4:before{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    bottom: 10px;
+    left: 35px;
+}
+.clouds.smaller .c5:before{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    bottom: 0px;
+    left: 45px;
+}
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-640px);
+            transform: translateX(-640px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-640px);
+            transform: translateX(-640px);
+  }
+}
