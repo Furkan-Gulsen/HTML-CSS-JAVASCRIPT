@@ -1,0 +1,120 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+body,html{
+    padding: 0;
+    margin: 0;
+    background: #000000;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    background: #fda231;
+    background: linear-gradient(45deg, #0074e8 0%, #009878 60%, #00dfd7 100%);
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+.card{
+    background: white;
+    color: #497081;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, .15);
+    width: 180px;
+}
+.card-header{
+    text-align:center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+.card-header h2{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 4px auto;
+    padding: 0;
+}
+.card-header p{
+    padding: 0 0 5px;
+    margin: 4px auto;
+    font-size: .8rem;
+}
+.card-list{
+    list-style: none;
+    padding: 0;
+}
+.card li{
+    padding: 10px 0 15px;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+.card-list li label{
+    cursor: pointer;
+    font-size: 0.82rem;
+    width: 100%;
+    display: block
+}
+.card-list li label input{
+    float: right;
+    opacity: 0;
+}
+.card-list li label span{
+    position: relative;
+    display: block;
+    transition: all 550ms ease-in-out;  
+}
+.card-list li label input + span::after{
+    content: "";
+    display: block;
+    border: 1px solid #497081;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    position:absolute;
+    right: 0;
+    top: 1px;
+    z-index: 10;
+    transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.card-list li label input + span::before{
+    content: "✔";
+    display: block;
+    font-size: 22px;
+    height: 13px;
+    width: 13px;
+    position:absolute;
+    right: -2px;
+    top: -8px;
+    z-index: 10;
+    opacity: 0;
+}
+.card-list li label input:checked + span{
+    color: #ccc;
+    transition: all 550ms ease-in-out;
+}
+.card-list li label input:checked + span::after{
+    opacity: 0;
+    height: 17px;
+    width: 17px;
+    top: -2px;
+    right: -2px;
+}
+.card-list li label input:checked + span::before {
+    opacity: 1;
+    transition: all 550ms ease-in-out;
+}
