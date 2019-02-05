@@ -1,0 +1,54 @@
+﻿body, html {
+    background: #252626;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.top {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 30px;
+}
+.top.a1 , .top.a1:before{
+    background: #d21f1f;
+    animation-delay: 0s;
+}
+.top.a2, .top.a2:before{
+    background: #69c820;
+    animation-delay: 0.2s;
+}
+.top.a3, .top.a3:before{
+    background: #ceb32a;
+    animation-delay: 0.4s;
+}
+.top.a4, .top.a4:before{
+    background: #306bb3;
+    animation-delay: 0.6s;
+}
+.top:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: ani 2s infinite ease-in;
+}
+@keyframes ani{
+    0%{
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
