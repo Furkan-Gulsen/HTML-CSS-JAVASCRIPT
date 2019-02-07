@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            background: #333
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 300px;
+            height: 250px;
+            border: 10px solid #e53f3f;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 10px #262626;
+        }
+        input{
+            display: block;
+            width: 150px;
+            padding: 5px;
+            padding-left: 15px;
+            margin: 0 auto;
+            border: none;
+            background: rgba(236, 236, 236, .9);
+            border-radius: 20px;
+            outline: none;
+            font-family: Verdana;
+            font-weight: bold;
+        }
+        button {
+            display: block;
+            width: 170px;
+            margin: 0 auto;
+            padding: 5px;
+            border: none;
+            background: #e53f3f;
+            border-radius: 20px;
+            outline: none;
+            font-family: Verdana;
+            font-weight: bold;
+        }
+        h2{
+            text-align: center;
+            font-family: Verdana;
+            color: #e53f3f;
+            text-shadow: 0px 0px 2px #262626;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hypotenuse calculation</h2>
+        <input type="number" id="edge1" placeholder="1.Edge"/><br />
+        <input type="number" id="edge2" placeholder="2.Edge" /><br />
+        <button onclick="calc()">Calculate</button>
+    </div>
+
+
+    <script>
+
+        function calc() {
+            var edge1 = Number(document.getElementById("edge1").value),
+                edge2 = Number(document.getElementById("edge2").value);
+
+            let edge1sqr = edge1 * edge1,
+                edge2sqr = edge2 * edge2;
+
+            let clc = Math.sqrt(edge1sqr + edge2sqr);
+            alert(clc)
+        }
+        
+
+    </script>
+
+
+</body>
+</html>
