@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        body, html {
+            padding: 0;
+            margin: 20px;
+            background: #333;
+            color: #e53f3f;
+            font-family: Verdana;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center
+        }
+        input {
+            width: 265px;
+            display: inline-block;
+            border: none;
+            border-radius: 20px 0px 0px 20px;
+            padding: 5px;
+            padding-left: 10px;
+            outline: none;
+            font-family: Verdana;
+        }
+        #add {
+            width: 50px;
+            position: relative;
+            display: inline-block;
+            border: none;
+            border-radius: 0px 20px 20px 0px;
+            padding: 4px;
+            margin-left: -5px;
+            top: -1.5px;
+            background: #e53f3f;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        button {
+            width: 160px;
+            padding: 5px;
+            background: #e53f3f;
+            color: #fff;
+            border: none;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        h2{
+            font-size: 16px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Find the largest and smallest number on an array</h2>
+        <input type="number" id="numbers" placeholder="Enter as many numbers as you want." />
+        <button onclick="add()" id="add">ADD</button><br />
+        <button onclick="small()">Smallest number</button>
+        <button onclick="bigger()">Biggest number</button>
+    </div>
+
+
+    <script>
+
+        
+        let NumValues = [];
+
+        function add() {
+            let numbers = document.getElementById("numbers").value;
+            NumValues.push(numbers);
+            console.log(NumValues)
+        }
+
+        function small() {
+            let min = Math.min.apply(Math, NumValues);
+            alert(min)
+        }
+
+        function bigger() {
+            let max = Math.max.apply(Math, NumValues);
+            alert(max)
+        }
+
+
+    </script>
+
+
+</body>
+</html>
