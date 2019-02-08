@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        body, html {
+            padding: 0;
+            margin: 20px;
+            background: #333;
+            color: #e53f3f;
+            font-family: Verdana;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            width: 250px;
+        }
+        input {
+            border: none;
+            border-radius: 20px 0px 0px 20px;
+            padding: 7px;
+            padding-left: 20px;
+            width: 100px;
+            outline: none;
+        }
+        button {
+            float: right;
+            width: 120px;
+            padding: 7px;
+            border: none;
+            border-radius: 0px 20px 20px 0px;
+            background: #e53f3f;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: .5s;
+        }
+        button:hover{
+            background: #cf274c;
+        }
+        #result{
+            margin-top: 20px;
+            width: 200px;
+            text-align:center;
+            margin-left: 30px;
+            font-size: 20px;
+            color: #fff;
+            font-family: Verdana;
+        }
+        h2{
+            text-transform: uppercase;
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>prime number?</h2>
+        <input type="number" id="num" />
+        <button onclick="control()">CONTROL</button><br />
+        <div id="result"></div>
+    </div>
+
+
+    <script>
+
+        function control() {
+            let num = document.getElementById("num").value,
+                res = document.getElementById("result");
+            var cntrl = 0;
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    cntrl++;
+                }
+            }
+            if (cntrl == 0) {
+                res.innerHTML = ("prime number")
+            }
+            else {
+                res.innerHTML = ("not prime number")
+            }
+        }
+
+
+    </script>
+</body>
+</html>
