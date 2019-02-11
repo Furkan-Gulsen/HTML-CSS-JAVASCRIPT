@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="1.page.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="container">
+        <h2>Calculating Rectangle Area and Circumference</h2>
+        <div class="box1">
+            <p id="short">
+                Short Edge
+                <input type="number" id="shortEdge" />
+            </p>
+        </div>
+        <div class="box2">
+            <p id="long">
+                Long Edge
+                <input type="number" id="longEdge" />
+            </p>
+        </div>
+        <button id="res" onclick="res()">RESET</button>
+        <button id="calc" onclick="calc()" >CALCULATE</button>
+    </div>
+
+    <script>
+
+        function res() {
+            let shortEdge = document.getElementById("shortEdge"),
+                 longEdge = document.getElementById("longEdge");
+            shortEdge.value = "";
+            longEdge.value = "";
+        }
+
+        function calc() {
+            let shortEdge = document.getElementById("shortEdge").value,
+                 longEdge = document.getElementById("longEdge").value;
+            let area = shortEdge * longEdge;
+            let circumference = (2 * shortEdge) + (2 * longEdge);
+            alert("area: " + area + "  /  " + "circumference: " + circumference);
+        }
+
+
+    </script>
+
+</body>
+</html>
