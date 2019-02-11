@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TrueCodes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: #b72626;
+            width: 400px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 40px #000;
+        }
+        h2 {
+            text-transform: uppercase;
+            color: #dedede;
+            text-align: center;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+        }
+        input {
+            display: block;
+            width: 75px;
+            height: 75px;
+            border: none;
+            background: #dedede;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px #262626;
+            margin: 0 auto;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Lucida Sans';
+            text-align: center;
+        }
+        button {
+            background: #000;
+            padding: 8px;
+            border: none;
+            color: #fff;
+            font-family: 'Lucida Sans';
+            font-weight: bold;
+            border-radius: 20px;
+            margin-left: 150px;
+            margin-top: 15px;
+            outline: none;
+            cursor: pointer;
+            transition: .5s;
+        }
+        button:hover{
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>factorial calculation</h2>
+        <input id="number" type="number" />
+        <button id="calc">CALCULATE</button>
+    </div>
+    
+    <script>
+
+        let calc = document.getElementById("calc");
+
+        calc.onclick = () => {
+            const num = document.querySelector("#number").value;
+            var arr = 1;
+            for (var i = num; i > 0; i--) {
+                arr *= i 
+            }
+            if (num < 0) {
+                alert("negative numbers do not have a factorial")
+            }
+            alert(arr);
+        }
+
+
+    </script>
+
+
+</body>
+</html>
