@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="1.page.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <span class="dark">DARK</span>
+        <div class="button"></div>
+        <span class="light">LIGHT</span>
+    </div>
+    <div class="menu">
+        <ul>
+            <a class="active" href="#" >HOME</a>
+            <a href="https://www.instagram.com/codeblogger/?hl=tr"  target="_blank">INSTAGRAM</a>
+            <a href="https://github.com/furkangulsen98/HTML-CSS-JAVASCRIPT"  target="_blank">GITHUB</a>
+            <a href="https://truecodes.org"  target="_blank">WEBPAGE</a>
+            <a href="#">ABOUT</a>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(".container").on("click", () => {
+            $("body").toggleClass("light-theme");
+        });
+    </script>
+
+</body>
+</html>

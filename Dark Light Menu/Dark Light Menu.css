@@ -1,0 +1,121 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #202028;
+    overflow: hidden;
+    transition: .5s;
+}
+.container {
+    color: #e7e7e7;
+    width: 50px;
+    height: 100px;
+    background: #000;
+    border-radius: 125px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50% );
+}
+.container .button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 5.7px;
+    background: #fff;
+    transition: .5s;
+}
+.dark {
+    position: relative;
+    top: -25px;
+    left: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+.light {
+    position: relative;
+    top: 85px;
+    left: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e7e7e7;
+    position: relative;
+    font-size: 18px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    top: -5px;
+    left: -5px;
+    transform: scale(0);
+    background: #a43333;
+    z-index: -1;
+    border-radius: 10px;
+}
+a:hover:before {
+    opacity: 1;
+    transition: 0.5s transform cubic-bezier(0,.44,.3,1.47);
+    transform: scale(1);
+}
+ul .active {
+    color: #a43333;
+}
+ul .active:hover:before {
+  opacity: 0;
+}
+.light-theme {
+    background: #e7e7e7;
+    color: #262626;
+}
+.light-theme .container {
+  background: #a43333;
+}
+.light-theme .container .button {
+  transform: translateY(46px);
+}
+.light-theme a {
+  color: #262626;
+}
+.light-theme .dark, .light-theme .light{
+    color: #a43333;
+    font-weight: bold;
+    transition: .5s;
+}
+.light-theme ul .active{
+    background: #a43333;
+    padding: 7px;
+    border-radius: 8px;
+    color: #e7e7e7;
+    margin-top: -8px;
+    transition: .5s;
+}
