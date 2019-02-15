@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="ArraySliceAnimation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body onload="message()">
+
+    <div class="container">
+
+        <h2>ARRAY SLICE</h2>
+
+        <div class="boxes">
+            <div class="box">0</div>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+        </div>
+
+        <div class="boxInput">
+            <span class="boxInp1">
+                <span class="num1" id="numtxt">start</span>
+                <span style=
+                      "color:#a88e32; font-size: 30px; padding: 0;margin:0;" 
+                      >{</span>
+                <input class="numBox" id="inputBegin" value="0" maxlength="1"/>
+                <span style=
+                      "color:#a88e32; font-size: 30px" 
+                      >}</span>
+            </span><br />
+            <span class="boxInp2">
+                <span class="num2" id="numtxt">,end</span>
+                <span style=
+                      "color:#a88e32; font-size: 30px; padding: 0;margin:0;" 
+                      >{</span>
+                <input class="numBox" id="inputEnd" value="0" maxlength="1"/>
+                <span style=
+                      "color:#a88e32; font-size: 30px" 
+                      >}</span>
+            </span><br />
+        </div>
+
+    </div>
+    
+
+
+
+    <script>
+
+        function message() {
+            alert("truecodes.org")
+        }
+
+        for(var event of ['input', 'keyup', 'wheel']) {
+            inputBegin.addEventListener(event, keyProcess)
+            inputEnd.addEventListener(event, keyProcess)
+        }
+
+        var say = 0;
+        function keyProcess(e) {
+            if(e.deltaY && Date.now() - say > 200){
+                say = Date.now();
+                let change = Math.sign(e.deltaY);
+                this.value = Math.min(9, Math.max(0, Number(this.value) + change));
+            }
+
+            if (e.keyCode == 38) {
+                var value = Math.min(Number(this.value) + 1, 9);
+                this.value = value;
+            }
+            if (e.keyCode == 40) {
+                var value = Math.max(Number(this.value) - 1, 0);
+                this.value = value;
+            }
+
+            var begin = Number(inputBegin.value)
+            var end = Number(inputEnd.value)
+
+            var arr = []
+            var arrayElements = document.querySelectorAll('.boxes .box')
+            for(var ele of arrayElements) {
+                ele.classList.remove('selected')
+                arr.push(ele)
+            }
+
+            var slicedElements = arr.slice(begin, end)
+            for(var ele of slicedElements) {
+                ele.classList.add('selected')
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

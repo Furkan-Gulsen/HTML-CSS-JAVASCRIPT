@@ -1,0 +1,151 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background: #262626;
+    font-family: monospace;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.container{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.boxes{
+    width: 700px;
+    height: 80px;
+    display: flex;
+}
+.boxes > .box{
+    background: #975353;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 80px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 20px;
+    opacity:0;
+    -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+.boxes .box:nth-of-type(1) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.boxes .box:nth-of-type(2) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.boxes .box:nth-of-type(3) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.boxes .box:nth-of-type(4) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+.boxes .box:nth-of-type(5) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.boxes .box:nth-of-type(6) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.boxes .box:nth-of-type(7) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+.boxes .box:nth-of-type(8) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+.boxes .box:nth-of-type(9) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.boxes .box:nth-of-type(10) {
+    -webkit-animation: in 0.5s forwards;
+    animation: in 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+@keyframes in {
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+h2{
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 5px;
+    border: none;
+    color: #e3dede;
+    border-radius: 20px;
+    border-bottom: 2px solid #975353;
+}
+.boxInput{
+    display: flex;
+    justify-content: center;
+}
+.boxInp1{
+    position: relative;
+    float: left;
+}
+#numtxt {
+    font-size: 42px;
+    color: #6da53d;
+}
+.numBox{
+    width: 30px;
+    height: 45px;
+    margin: 7px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    text-align: center;
+    line-height: 45px;
+    outline: none;
+    border-bottom: 1px solid rgba(157, 148, 61, 0.65);
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #e3dede
+}
+.num2{
+    margin-left: 10px;
+}
+.boxes > .box.selected {
+    background: #33b758;
+    transition: .5s;
+}
