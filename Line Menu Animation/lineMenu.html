@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="lineMenu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="center">
+            <div class="menu paused">
+                <div class="menu-top"></div>
+                <div class="top-line"></div>
+                <div class="menu-bottom"></div>
+                <div class="bottom-line"></div>
+            </div>
+            <div class="menu-items">
+                <ul>
+                    <li class="a">HOME</li>
+                    <li>INSTAGRAM</li>
+                    <li>WEBPAGE</li>
+                    <li>GITHUB</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        line = document.querySelector(".menu");
+        menu = document.querySelector(".menu-items");
+
+        line.addEventListener("click", function () {
+            setTimeout(lineFunction, 200);
+            menuToggle();
+        })
+
+        function lineFunction() {
+            if (line.classList.contains("paused") === true) {
+                line.classList.replace("paused", "active");
+            }
+            else if (line.classList.contains("active") === true) {
+                line.classList.remove("active");
+                line.classList.add("inactive");
+            }
+            else {
+                line.classList.remove("inactive");
+                line.classList.add("active");
+            }
+        }
+
+        function menuToggle() {
+            menu.classList.toggle("active")
+        }
+
+    </script>
+</body>
+</html>
