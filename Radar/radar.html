@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="radar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+
+    <div id="container">   
+        <div onmousemove="myRadar(event)" id="out">
+            <div id="in"></div>
+            <div id="radar"></div>
+        </div>
+        <div id="coordinate"></div>
+    </div>
+
+    <script>
+
+        function myRadar(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            let show = document.getElementById("coordinate");
+            show.innerHTML = "X:" + x + "&emsp;&emsp;" + "Y:" + y;
+               
+        }
+
+    </script>
+
+</body>
+</html>

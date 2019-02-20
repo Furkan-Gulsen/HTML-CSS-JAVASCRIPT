@@ -1,0 +1,113 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background-image: url("http://wallpaper-gallery.net/images/hd-digital-wallpaper/hd-digital-wallpaper-17.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: -120px;
+    background-color: #262626;
+}
+#container{
+    width: 500px;
+    height:500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+}
+#out {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 10px solid #3cf92f;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 20px #000;
+    background: none;
+    animation: a .3s screen infinite;
+}
+#in {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #3cf92f;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 20px #000;
+}
+#radar {
+    width: 350px;
+    height: 0px;
+    background: #3ed50f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -175px;
+    animation: ani 3s infinite;
+    box-shadow: 20px 0px 15px 10px #3cf92f;
+    z-index: -1;
+}
+@keyframes ani{
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        opacity: .2
+    }
+    20% {
+        opacity: .8
+    }
+    30% {
+        opacity: .2
+    }
+    40% {
+        opacity: .8
+    }
+    50% {
+        opacity: .2
+    }
+    60% {
+        opacity: .8
+    }
+    70% {
+        opacity: .2
+    }
+    80% {
+        opacity: .8
+    }
+    30% {
+        opacity: .2
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+@keyframes a {
+    0% {
+        background: none;
+    }
+    100% {
+        background: #094d00;
+    }
+}
+#coordinate {
+    color: #ccc;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Consolas;
+    font-size: 30px;
+    padding: 5px;
+    border: 10px solid #094d00;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 0px 50px #000;
+}
