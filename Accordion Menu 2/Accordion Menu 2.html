@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Accordion Menu 2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h3>Accordion Menu 2</h3>
+        
+        <div class="accordion">
+
+            <!-- Menu 1 -->
+            <div class="accordion-item">
+                <a>What is Angular JS? How to use?</a>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Elementum sagittis vitae et leo
+                        duis ut. Ut tortor pretium viverra suspendisse potenti.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menu 2 -->
+            <div class="accordion-item">
+                <a>What is ReactJS? How to use?</a>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Elementum sagittis vitae et leo
+                        duis ut. Ut tortor pretium viverra suspendisse potenti.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menu 3 -->
+            <div class="accordion-item">
+                <a>What is Node.js? How to use?</a>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Elementum sagittis vitae et leo
+                        duis ut. Ut tortor pretium viverra suspendisse potenti.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menu 4 -->
+            <div class="accordion-item">
+                <a>What is Vue.js? How to use?</a>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Elementum sagittis vitae et leo
+                        duis ut. Ut tortor pretium viverra suspendisse potenti.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menu 5 -->
+            <div class="accordion-item">
+                <a>What is jQuery? How to use?</a>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Elementum sagittis vitae et leo
+                        duis ut. Ut tortor pretium viverra suspendisse potenti.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        const items = document.querySelectorAll(".accordion a");
+        items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+
+    </script>
+
+</body>
+</html>
