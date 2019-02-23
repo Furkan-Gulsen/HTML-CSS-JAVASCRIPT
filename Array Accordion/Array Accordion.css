@@ -1,0 +1,53 @@
+﻿body{
+    padding: 0;
+    margin: 0;
+    background: #333;
+}
+.container {
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+}
+h2 {
+    font-family: 'AR CENA';
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 42px;
+    text-align: center
+}
+.section {
+    position: relative;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #ffe725;
+    margin: 5px;
+    color: #262626;
+    font-family: 'AR CENA';
+    font-weight: bold;
+    transition: all 0.4s ease-in-out 0.15s;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: inset 0px 0px 20px #262626;
+}
+.item > .info {
+    opacity: 0;
+    transition: all 0.5s ease 0.3s;
+    max-height: 0;
+}
+.section.active ~ .info {
+    transition: all 0.4s ease-in-out 0.15s;
+    opacity: 1;
+    max-height: 100%;
+    padding: 20px;
+    background: #ccc;
+    color: #262626;
+    font-family: 'Segoe UI';
+    font-size: 15px;
+    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.section.active {
+    border-radius: 30px 30px 0px 0px;
+    margin:0;
+    box-shadow: inset 0px 0px 20px #262626;
+}

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Array Accordion.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>JavaScript Array</h2>
+
+        <!-- Array from() -->
+        <div class="item">
+            <div class="section from">Array from()</div>
+            <div class="info">
+                “Array.from ()” separates the values ​​that are written into.
+                it defines each of the things he separates as a sequence element.
+            </div>
+        </div>
+
+        <!-- Array isArray() -->
+        <div class="item">
+            <div class="section isArray">Array isArray()</div>
+            <div class="info">
+                Array.isArray() function determines whether the value
+                passed to this function is an array or not. This function
+                returns true if the argument passed is array else it returns false.
+            </div>
+        </div>
+
+        <!-- Array pop()-->
+        <div class="item">
+            <div class="section pop"> Array pop()</div>
+            <div class="info">
+                The pop () method removes the last element of an array.
+                And define a new array. So this method changes the sequence
+                (length and elements).
+                pop () does not perform properly when applied
+                regularly to non-sequence arrays. If we apply pop ()
+                in an empty array, it returns the “undefined” value.
+            </div>
+        </div>
+
+        <!-- Array push()  -->
+        <div class="item">
+            <div class="section push">Array push() </div>
+            <div class="info">
+                The push () method adds one or more elements to the end
+                of an array. And it returns its new length. This changes
+                the number and length of elements of the array.
+                Although strings are natural, the strings are not invariant
+                because they are array-like objects, but are not suitable
+                for applications in this method. Similarly, the Array-like
+                object also applies to arguments.
+            </div>
+        </div>
+
+        <!-- Array slice()  -->
+        <div class="item">
+            <div class="section from">Array from()</div>
+            <div class="info">
+                The Slice() method copies the desired portion of a directory.
+            </div>
+        </div>
+
+        <!-- Array sort()  -->
+        <div class="item">
+            <div class="section sort">Array sort() </div>
+            <div class="info">
+                The sort () method sorts the items in an array.
+                This order (if we do not specify a function) is
+                in the form of increasing order.
+            </div>
+        </div>
+
+        <!-- Array forEach() -->
+        <div class="item">
+            <div class="section forEach">Array forEach()</div>
+            <div class="info">
+                The forEach () method is used to execute a function on each
+                element in an array. In other words: forEach (), the
+                ForEach () method runs a function once provided for each
+                array element.
+            </div>
+        </div>
+
+        <!-- Array map() -->
+        <div class="item">
+            <div class="section from">Array from()</div>
+            <div class="info">
+                The Map () method scans through each element of the array. 
+                It returns a new array with the elements it scans. The map()
+                method calls the provided function once for each element in
+                an array, in order. The map () method does not change the array, 
+                like other methods.
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        let box = document.querySelectorAll(".section");
+        
+        box.forEach((x) => x.addEventListener("click", myFunction));
+
+        function myFunction() {
+            this.classList.toggle("active");
+        }
+
+    </script>
+
+</body>
+</html>
