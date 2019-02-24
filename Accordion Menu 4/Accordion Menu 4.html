@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Accordion Menu 4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="accordion">Accordion Menu 4</div>
+
+        <!-- Item 1 -->
+        <div class="item">
+            <div class="section">Read me</div>
+            <div class="info">
+                Click on an item to open. Click on its header or the list header to close.
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="item">
+            <div class="section">Read me too</div>
+            <div class="info">
+                Add the class 'arrows' to nav.accordion to add dropdown arrows.
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="item">
+            <div class="section">Item 3</div>
+            <div class="info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="item">
+            <div class="section">Item 4</div>
+            <div class="info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.
+            </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="item">
+            <div class="section">Item 5</div>
+            <div class="info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                pretium viverra suspendisse potenti.
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script>
+
+        let item = document.querySelectorAll(".item");
+
+        item.forEach((x) => x.addEventListener("click", itemFunction))
+
+        function itemFunction() {
+            this.classList.toggle("active")
+        }
+
+    </script>
+
+</body>
+</html>

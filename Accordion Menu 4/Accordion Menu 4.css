@@ -1,0 +1,67 @@
+﻿@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+body {
+    margin: 0;
+    padding: 0;
+    background: ;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.container{
+    width: 325px;
+    margin: 50px auto;
+}
+.accordion {
+    width: 100%;
+    background: #00bcd4;
+    padding: 15px;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 21px;
+    text-indent: 10px;
+    box-sizing: border-box;
+}
+.item {
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 6px 0px;
+    transition: .5s;
+}
+.section {
+    position: relative;
+    padding: 15px;
+    color: #262626;
+    cursor: pointer;
+    border-bottom: 1.5px solid #ccc;
+}
+.info {
+    width: 90%;
+    color: #808080;
+    max-height: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.section:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f105";
+    padding-right: 10px;
+    transition: .5s;
+}
+.item.active >  .info {
+    max-height: 100%;
+    margin-left: 10px;
+    padding: 13px 10px 20px 10px;
+    opacity: 1;
+}
+.item.active {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.50);
+    transform: scale(1.05);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.item.active > .section:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f107";
+}
