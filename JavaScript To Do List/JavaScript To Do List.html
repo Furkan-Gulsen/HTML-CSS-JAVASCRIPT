@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="JavaScript To Do List.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>TO DO LIST</h2>
+        <div id="addBox">
+            <div id="plus" onclick="addBox()"></div>
+            <input type="text" id="txt" class="txt" placeholder="Add to-do..."/>
+        </div>
+
+        <div id="list">
+            <div class="box" id="box">
+                <div class="txtBox">Örnek kutu</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        let box = document.getElementsByClassName("box");
+        var i;
+
+        for (i = 0; i < box.length; i++) {
+            let x = document.createElement("DIV");
+            x.setAttribute("class", "x");
+            box[i].appendChild(x);
+        }
+        
+
+        let Xbox = document.getElementsByClassName("x");
+
+
+        function addBox() {
+            let div = document.createElement("div");
+            div.setAttribute("class", "box");
+            div.setAttribute("id", "box");
+            let txt = document.getElementById("txt").value;
+            let txtNode = document.createTextNode(txt);
+            let txtBox = document.createElement("div");
+            txtBox.setAttribute("class", "txtBox");
+            txtBox.appendChild(txtNode);
+            div.appendChild(txtBox);
+            
+
+            if (txt === "") {
+                alert("You can't do an empty job");
+            }
+            else {
+                document.getElementById("list").appendChild(div);
+            }
+            document.getElementById("txt").value = "";
+
+            let x = document.createElement("DIV");
+            x.setAttribute("class", "x");
+            box[i].appendChild(x);
+            for (i = 0; i < Xbox.length; i++) {
+                Xbox[i].onclick = function () {
+                    this.parentElement.classList.add("active")
+                }
+            }
+
+        }
+
+        let list = document.getElementById("list");
+        list.addEventListener("click", function (e) {
+            if (e.target.getAttribute("class") === "box") {
+                e.target.classList.toggle("checked");
+            }
+        },false)
+
+    </script>
+
+</body>
+</html>
