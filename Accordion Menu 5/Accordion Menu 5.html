@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Accordion Menu 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Accordion Menu 5</h2>
+        <div class="accordion_Boxes">
+
+            <!-- Accordion Box 1 -->
+            <div class="accordionBox">
+                <div id="top" class="top">
+                    <span>What is HTML ?</span>
+                </div>
+                <div class="bottom">
+                    HTML is a computer language devised to allow
+                    website creation. These websites can then be viewed
+                    by anyone else connected to the Internet. It is relatively
+                    easy to learn, with the basics being accessible to most
+                    people in one sitting; and quite powerful in what it allows
+                    you to create.
+                </div>
+            </div>
+
+            <!-- Accordion Box 2 -->
+            <div class="accordionBox">
+                <div id="top" class="top">
+                    <span>What is CSS ?</span>
+                </div>
+                <div class="bottom">
+                    CSS is the language for describing the presentation 
+                    of Web pages, including colors, layout, and fonts.
+                    It allows one to adapt the presentation to different 
+                    types of devices, such as large screens, small screens, 
+                    or printers.
+                </div>
+            </div>
+
+            <!-- Accordion Box 3 -->
+            <div class="accordionBox">
+                <div id="top" class="top">
+                    <span>What is JS ?</span>
+                </div>
+                <div class="bottom">
+                    JavaScript is a scripting language used to 
+                    create and control dynamic website content—but 
+                    that might not make a lot of sense if you’re new 
+                    to tech.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        let topBox = document.querySelectorAll(".top");
+
+        topBox.forEach((x) => x.addEventListener("click", dropFunction));
+
+        function dropFunction() {
+            this.classList.toggle("active");
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

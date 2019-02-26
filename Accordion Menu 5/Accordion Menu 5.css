@@ -1,0 +1,71 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+    background: #262626;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+}
+.container{
+    margin-top: 60px;
+    width: 375px;
+    height: 400px;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: normal;
+}
+.accordion_Boxes{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.top {
+    position: relative;
+    width: 100%;
+    height: 57px;
+    line-height: 57px;
+    background: #eeeeee;
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.top:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #ccc;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 17px;
+    display: inline-block;
+    box-shadow: inset 0px 0px 12.5px #262626;
+    transition: .5s;
+}
+.top.active:before{
+    background: #386a26;
+}
+span{
+    position: absolute;
+    top: 0px;
+}
+.bottom {
+    display: block;
+    background: #dedede;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.top.active ~ .bottom{
+    padding: 25px;
+    opacity: 1;
+    max-height: 100%;
+}
