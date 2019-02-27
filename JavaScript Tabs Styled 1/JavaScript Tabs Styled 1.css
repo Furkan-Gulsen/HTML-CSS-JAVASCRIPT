@@ -1,0 +1,88 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+html {
+    height: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    user-select: none;
+}
+body {
+    background: linear-gradient(to bottom right, #3D4258, #6670A0, #9688B4);
+}
+.container{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    width: 500px;
+    height: auto;
+}
+h2{
+    text-align: center;
+    color: #dedede;
+    font-size: 40px;
+    text-shadow: 0px 15px 15px #262626;
+}
+.main_box{
+    position: relative;
+    margin-top: 50px;
+}
+#tabs {
+    width: 100%;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.tab {
+    text-align: center;
+    padding: 8px 10px 8px 10px;
+    margin-right: 10px;
+    background: #444c6a;
+    border: 1px solid #dedede;
+    border-radius: 30px;
+    float: left;
+    color: #dedede;
+    transition: .5s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.tab:hover{
+    background: #3D4258;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 85);
+}
+#text_box{
+    margin-top: 25px;
+    clear: both;
+    width: 100%;
+}
+.text {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(45deg,#dedede,#d8d8d8);
+    border-radius: 1px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    color: rgba(5, 0, 0, 0.65);
+    transition: .5s ease-in-out;
+}
+#tab1{ opacity: 1; }
+#tab2, #tab3 { opacity: 0; }
+.tab_1.active {
+    background: #3D4258;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 85);
+}
+.tab_2.active {
+    background: #3D4258;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 85);
+}
+.tab_3.active {
+    background: #3D4258;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 85);
+}
