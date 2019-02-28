@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="JavaScript Tabs Style 2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Tabs Styled</h2>
+        <div class="tabs">
+            <div class="tab tab1 " onclick="clickFunction(event,'js')">JavaScript</div>
+            <div class="tab tab2 " onclick="clickFunction(event,'py')">Python</div>
+            <div class="tab tab3 " onclick="clickFunction(event,'css')">CSS</div>
+        </div>
+
+        <div class="text_box">
+            <div class="text tab_box1" id="js">
+                JavaScript is one of the most popular and dynamic programming
+                languages used for creating and developing websites.
+            </div>
+            <div class="text tab_box2" id="py">
+                Python is a highly used and all-purpose programming
+                language which is dynamic in nature.
+            </div>
+            <div class="text tab_box3" id="css">
+                Some of the elements which CSS has an impact on include
+                font size, font style, the overall layout.
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function clickFunction(eve, section) {
+            let i, text, tabs;
+            text = document.getElementsByClassName("text");
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < text.length; i++) {
+                text[i].style.display = "none";
+            }
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].className = tabs[i].className.replace("active","");
+            }
+            document.getElementById(section).style.display = "block";
+            eve.currentTarget.className += "active";
+        }
+
+    </script>
+
+</body>
+</html>
