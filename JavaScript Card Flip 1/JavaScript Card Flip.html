@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="JavaScript Card Flip.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body onkeydown="keyFunction(event)">
+
+    <div class="container">
+
+        <div class="card">
+            <div class="front word1_front">TRUECODES</div>
+        </div>
+
+        <div class="card">
+            <div class="back word1_back">CODEBLOGGER</div>
+        </div>
+    </div>
+
+    <script>
+
+        let box = document.querySelector(".container");
+        box.addEventListener("click", function () {
+            box.classList.toggle("active");
+        });
+
+        function keyFunction(e) {
+            if (e.keyCode == 38) {
+                box.classList.add("active");
+            };
+            if (e.keyCode == 40) {
+                box.classList.remove("active");
+            };
+        };
+
+    </script>
+
+</body>
+</html>
