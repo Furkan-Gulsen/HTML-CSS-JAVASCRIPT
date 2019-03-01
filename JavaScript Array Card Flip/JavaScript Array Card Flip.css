@@ -1,0 +1,108 @@
+﻿@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+html,body{
+    margin: 0;
+}
+body {
+    background: url("js.jpg");
+    background-size: cover;
+    position:absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%,-50%);
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.container{
+    position: relative;
+    width: 250px;
+    height: 525px;
+    perspective:1000px;
+    -webkit-perspective: 1000px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+h2{
+    color: #ccc;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;   
+    word-spacing: 5px;
+    line-height: 36px;
+}
+.card {
+    width: 225px;
+    height: 350px;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.15);
+    cursor: pointer;
+    transform: translateX(12.5px) translateY(5px);
+}
+    .card div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 6px;
+        background: linear-gradient(to bottom right, #272e41, #15243b, #060d1d);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana;
+        color: #ccc;
+    }
+.card .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+          padding-left: 5px;
+          padding-right: 5px;
+}
+.card.active {
+    -webkit-transform: rotateX(180deg) translateX(12.5px) translateY(5px);
+    transform: rotateX(180deg) translateX(12.5px) translateY(5px);
+}
+.fas{
+    position: absolute;
+    z-index: 99;
+    bottom: 10px;
+    color: #ccc;
+    font-size: 24px;
+}
+.front {
+    font-size: 25px;
+}
+.back.word1_back{
+    font-family: Verdana
+}
+#back_arrow {
+    left: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+#back_arrow:hover{ transform:scale(1.2)}
+#next_arrow {
+    right: 50px;
+    cursor: pointer;
+}
+#cardBox_2{
+    margin-left: 275px
+}
+#cardBox_3{
+    margin-left: 550px;
+}
+#cardBox_4{
+    margin-left: 825px;
+}
+#cardBox_5 {
+    margin-left: 1100px;
+}
+#cardBox_6 {
+    margin-left: 1375px;
+}
+#cardBox_7 {
+    margin-left: 1650px;
+}

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="JavaScript Array Card Flip.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body onkeydown="keyFunction(event)">
+
+    <div class="container">
+        <!-- title -->
+        <h2>JavaScript <br />Array Card Flip</h2>
+
+        <!-- Card Box 1 -->
+        <div id="cardBox_1">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array fill()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The fill() method serves to fill the array
+                    with the specified variables. it takes 3
+                    parameters. They are value, start and end.
+                    Start and end values ​​can be given on request.
+                    But it is imperative to enter value.
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 2 -->
+        <div id="cardBox_2">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array pop()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The pop () method removes the last element of an array.
+                    And define a new array. So this method changes the
+                    sequence (length and elements).
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 3 -->
+        <div id="cardBox_3">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array push()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The push () method adds one or more elements to the end
+                    of an array. And it returns its new length. This changes
+                    the number and length of elements of the array.
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 4 -->
+        <div id="cardBox_4">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array sort()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The sort () method sorts the items in an array.
+                    This order (if we do not specify a function) is
+                    in the form of increasing order.
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 5 -->
+        <div id="cardBox_5">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array slice()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The Slice() method copies the desired portion of a directory.
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 6 -->
+        <div id="cardBox_6">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">Array every()</div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    “Every” function checks whether all the elements of
+                    the array satisfy the given condition or not that is
+                    provided by a function passed to it as the argument.
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Box 7 -->
+        <div id="cardBox_7">
+            <div class="card" onclick="transFunction()">
+                <div class="front word1_front">
+                    Array map()
+                </div>
+            </div>
+
+            <div class="card" onclick="transFunction()">
+                <div class="back word1_back">
+                    The Map () method scans through each element 
+                    of the array. It returns a new array with the elements 
+                    it scans. The map() method calls the provided function 
+                    once for each element in an array, in order.
+                </div>
+            </div>
+        </div>
+
+
+        <i id="back_arrow" onclick="backFunction()" class="fas fa-chevron-circle-left"></i>
+        <i id="next_arrow" onclick="nextFunction()" class="fas fa-chevron-circle-right"></i>
+    </div>
+
+    <script>
+        
+        let box = document.querySelectorAll(".card");
+        function transFunction() {
+            var i;
+            for (i = 0; i < box.length; i++) {
+                box[i].classList.toggle("active");
+            }
+        }
+        function keyFunction(e) {
+            var i;
+            for (i = 0; i < box.length; i++) {
+                if (e.keyCode == 38) {
+                    box[i].classList.add("active");
+                }
+                if (e.keyCode == 40) {
+                    box[i].classList.remove("active");
+                }
+            }
+            if (e.keyCode == 39) {
+                nextFunction()
+            }
+            if (e.keyCode == 37) {
+                backFunction()
+            }
+        };
+
+        let n = 0;
+        function nextFunction() {
+            let i;
+            n = n - 275;
+            if (n <= (-275)*(box.length/2)) {
+                n = (-275)*(box.length/2);
+            }
+            for (i = 0; i < box.length; i++) {
+                box[i].style.marginLeft = n + "px";
+            }
+        }
+
+        function backFunction() {
+            let i;
+            console.log(box.length)
+            n = n + 275;
+            if (n > 0) {
+                n = 0;
+            }
+            for (i = 0; i < box.length; i++) {
+                box[i].style.marginLeft = n + "px";
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
