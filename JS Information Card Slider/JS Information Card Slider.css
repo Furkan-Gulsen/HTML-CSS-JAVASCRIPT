@@ -1,0 +1,164 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #de732d;
+    overflow: hidden;
+    transition: 1s;
+}
+.card{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px #333;
+    padding: 20px;
+}
+.image {
+    width: 150px;
+    height: 210px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 40px auto;
+}
+h2 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+    user-select: none;
+}
+p {
+    margin-top: 0;
+    font-weight: 400;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.64);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 100px;
+    user-select: none;
+}
+.next {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.prev {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* CARD 1 */
+.card_1 {
+    background: #f6f6f6;
+    transition: 1s;
+}
+.card_1 .image{
+    background-image: url("https://png.pngtree.com/png_detail/18/09/10/pngtree-vector-deer-png-clipart_3296362.jpg");
+}
+.card_1 h2 {
+    color: #ac5422;
+}
+.card_1 .next{
+    color: #ac5422;
+}
+.card_1 .prev{
+    color: #ac5422;
+}
+/* CARD 2 */
+.card_2 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: 1200px;
+    opacity: 0;
+    transition: 1.4s;
+}
+.card_2 .image{
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/12/09/bebaea9d5a190e1a3aee6bebc3c50f23.jpg");
+    width: 200px;
+    height: 175px;
+}
+.card_2 h2{
+    color: #7c4019
+}
+.card_2 .next{
+    color: #7c4019;
+}
+.card_2 .prev{
+    color: #7c4019;
+}
+.card_2.active{
+    opacity: 1;
+    margin: 0;
+    transform: translateX(-50%) scale(1) rotate(10deg);
+}
+
+
+/* CARD 3 */
+.card_3 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px;
+    transition: 1.4s;
+}
+.card_3 .image {
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/07/08/20577f9885dd0d3.jpg");
+    width: 200px;
+    height: 175px;
+}
+.card_3 h2{
+    color: #8b8b8b
+}
+.card_3 .next{
+    color: #8b8b8b;
+}
+.card_3 .prev{
+    color: #8b8b8b;
+}
+.card_3.active{
+    margin: 0;
+    transform: translateX(-60%) scale(1) rotate(-7deg);
+}
+
+/* CARD 4 */
+.card_4 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_4 .image {
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/07/09/1457809f52cac1b.jpg");
+    width: 220px;
+    margin-bottom: 0;
+    background-size: 350px 350px;
+    background-position: center;
+}
+.card_4 h2{
+    color: #e8672e
+}
+.card_4 .next{
+    color: #e8672e;
+}
+.card_4 .prev{
+    color: #e8672e;
+}
+.card_4.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) rotate(4deg);
+}
