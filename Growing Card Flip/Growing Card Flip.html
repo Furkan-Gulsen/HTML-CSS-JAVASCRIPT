@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Growing Card Flip.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="front">
+                Front
+            </div>
+            <div class="back">
+                Back
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let card = document.querySelector(".card");
+        card.addEventListener("click", function () {
+            card.classList.toggle("active");
+        });
+
+    </script>
+
+</body>
+</html>
