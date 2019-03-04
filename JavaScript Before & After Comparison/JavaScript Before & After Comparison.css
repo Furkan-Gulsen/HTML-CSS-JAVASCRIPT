@@ -1,0 +1,32 @@
+﻿body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    --width: 800px;
+    --height: 400px;
+    width: var(--width);
+    height: var(--height);
+}
+.image {
+    position: absolute;
+    height: 100%;
+    background: url("https://cn.opendesktop.org/img/c/7/4/1/c5a5f92b530de2cf2c18e917c8a51ac60cb6.jpg");
+    background-size: var(--width) var(--height);
+}
+.image:first-child{
+    right: 0;
+    width: 100%;
+    background-position: center left;
+}
+.image:last-child{
+    right: 0;
+    width: calc( 100% - var(--x,50%));
+    background-position: center right;
+    filter: grayscale(100%);
+    box-shadow: inset 2px 0 0 #111, -2px 0 0 #111;
+}

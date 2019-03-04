@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="JavaScript Before & After Comparison.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="image"></div>
+        <div class="image"></div>
+    </div>
+
+    <script>
+
+        document.querySelectorAll('.container').forEach((elem) => {
+            let x, width
+            elem.onmouseenter = () => {
+                const size = elem.getBoundingClientRect()
+                x = size.x
+                width = size.width
+            }
+
+            elem.onmousemove = (e) => {
+                const horizontal = ((e.clientX - x) / width) * 100
+                elem.style.setProperty('--x', horizontal + '%')
+            }
+        })
+
+    </script>
+   
+</body>
+</html>
