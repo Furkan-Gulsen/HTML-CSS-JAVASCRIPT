@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Accordion Menu 6.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h2>Accordion Menu</h2>
+
+        <!-- wrap 1 -->
+        <div class="wrap">
+            <div class="wrap_title">WRAP ONE</div>
+            <div class="wrap-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia autem quasi inventore unde nobis voluptatibus
+                    illum quae rerum laudantium minima, excepturi quis maiores.
+                    Eaque quae, nam delectus explicabo, deserunt ipsum!
+                </p>
+            </div>
+        </div>
+
+        <!-- wrap 2 -->
+        <div class="wrap">
+            <div class="wrap_title">WRAP TWO</div>
+            <div class="wrap-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia autem quasi inventore unde nobis voluptatibus
+                    illum quae rerum laudantium minima, excepturi quis maiores.
+                    Eaque quae, nam delectus explicabo, deserunt ipsum!
+                </p>
+            </div>
+        </div>
+
+        <!-- wrap 3 -->
+        <div class="wrap">
+            <div class="wrap_title">WRAP THREE</div>
+            <div class="wrap-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia autem quasi inventore unde nobis voluptatibus
+                    illum quae rerum laudantium minima, excepturi quis maiores.
+                    Eaque quae, nam delectus explicabo, deserunt ipsum!
+                </p>
+            </div>
+        </div>
+
+        <!-- wrap 4 -->
+        <div class="wrap">
+            <div class="wrap_title">WRAP FOUR</div>
+            <div class="wrap-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia autem quasi inventore unde nobis voluptatibus
+                    illum quae rerum laudantium minima, excepturi quis maiores.
+                    Eaque quae, nam delectus explicabo, deserunt ipsum!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let wrap = document.querySelectorAll(".wrap");
+        
+        wrap.forEach((x) => x.addEventListener("click", function () {
+            this.classList.toggle("active");
+        }))
+
+    </script>
+
+</body>
+</html>
