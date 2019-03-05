@@ -1,0 +1,73 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+}
+.container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#text, button{
+     width: 200px;
+     text-align: center;
+     margin: 0 auto;
+}
+#text {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px 20px 0px 0px;
+    outline: none;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+button {
+    border: none;
+    border-radius: 0px 0px 20px 20px;
+    outline: none;
+    padding: 7px;
+    width: 214px;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'Fjalla One', sans-serif;
+    color: #eee;
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+button:hover{
+    background: #262626;
+}
+.boxes {
+    position: absolute;
+    top: 210px;
+    margin-top: 20px;
+    width: 500px;
+    height: auto;
+    left: -125px;
+}
+.box {
+    position: relative;
+    float: left;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+h2 {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.box:hover{
+    transform: scale(1.3);
+    background: #262626;
+    color: #eee;
+}

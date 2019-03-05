@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="Array.from Animation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <h2>Array.from</h2>
+        <input type="text" id="text" placeholder="text...."/>
+        <button onclick="myFunction()">CLICK</button>
+        <div class="boxes"></div>
+    </div>
+
+    <script>
+
+
+
+        function myFunction() {
+            let text = document.getElementById("text").value;
+            let boxes = document.querySelector(".boxes");
+            let list = Array.from(text);
+
+                list.forEach(function (x) {
+                    let box = document.createElement("div");
+                    box.setAttribute("class", "box");
+                    let txt = document.createTextNode(x);
+                    box.appendChild(txt)
+                    document.querySelector(".boxes").appendChild(box);
+                })
+
+                for (let i = 0; i < 3; i++) {
+                    let line = document.createElement("br");
+
+                    boxes.appendChild(line);
+                }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>
