@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="SCSS and JS Tabs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+    
+    <div id="container">
+        <div id="top" >
+            <ul>
+                <li id="sec_1">HTML</li>
+                <li id="sec_2">CSS</li>
+                <li id="sec_3">JavaScript</li>
+                <li id="sec_4">Jquery</li>
+            </ul>
+        </div>
+        <div id="bottom" >
+            <div class="html">
+                <h2>HTML</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed sit amet nulla tortor, a posuere urna. Praesent 
+                    urna quam, semper ut ultricies et, mollis ac elit.
+                    <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Sed sit amet nulla tortor, a posuere urna. Praesent urna 
+                    quam, semper ut ultricies et, mollis ac elit. Suspendisse
+                    tempor, lacus id consectetur sagittis, lorem odio dignissim
+                    nulla, a condimentum sem neque sed ligula. Maecenas id risus
+                    eros, eget porttitor metus. Quisque pellentesque neque dignissim 
+                    nisl pellentesque vitae tempus urna eleifend. Nullam egestas,
+                    neque id placerat luctus, nibh velit pharetra nulla, vel pretium 
+                    justo massa ut elit. Vivamus nec auctor nunc.
+                </p>
+            </div>
+            <div class="css">
+                <h2>CSS</h2>
+                <p>
+                    Maecenas dictum, urna ut consequat condimentum, est dui 
+                    commodo diam, ac pretium dui ante eu quam. Curabitur posuere
+                    metus nec tellus venenatis placerat. Ut egestas neque in
+                    odio vulputate gravida. In at justo ac est laoreet eleifend 
+                    vel quis arcu. Aliquam erat volutpat. Proin vitae vehicula 
+                    neque. Nam tempus erat ac ante tincidunt tincidunt. 
+                    Pellentesque eu nibh sapien. Nunc augue magna, lacinia
+                    eget congue eget, mattis id tortor. Fusce id vestibulum neque. 
+                    Proin tincidunt tellus ut risus lobortis cursus. Duis sit amet
+                    urna vel sapien ullamcorper varius.    
+                </p>
+            </div>
+            <div class="javascript">
+                <h2>JavaScript</h2>
+                <p>
+                    Duis luctus dolor ac erat luctus hendrerit. Aenean id congue magna.
+                     sit amet elit vel lacus ornare dignissim imperdiet nec odio.
+                    Maecenas condimentum egestas lorem et laoreet. Donec ut leo non 
+                    purus rutrum euismod vel faucibus nunc. Curabitur vel mauris 
+                    nisi, vitae laoreet erat. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Vestibulum ante ipsum primis in faucibus orci 
+                    luctus et ultrices posuere cubilia Curae; Maecenas ipsum odio, 
+                    iaculis id vulputate vitae, vestibulum at nunc. Integer non nisl
+                    lorem. Quisque lobortis congue semper. Nunc neque nisi, consequat
+                    id egestas vitae, porta vel sem.
+                </p>
+            </div>
+            <div class="Jquery">
+                <h2>Jquery</h2>
+                <p>
+                    Fusce vel eros eu lectus ultricies fermentum vestibulum adipiscing 
+                    odio. Suspendisse ultricies, metus nec dapibus pharetra, quam arcu 
+                    vulputate nisl, a pretium nisi velit id ante. Nunc auctor augue sit 
+                    amet orci vestibulum id placerat nulla pellentesque. Duis vel quam 
+                    velit. Ut auctor ipsum quis lacus semper non pretium mi dignissim.
+                    Morbi ultrices augue eget nisi hendrerit placerat. Mauris rhoncus 
+                    urna quis metus congue quis condimentum risus interdum. Nam lobortis 
+                    lectus et enim laoreet mattis. Integer faucibus ullamcorper erat, at 
+                    rhoncus leo bibendum sed. Mauris libero urna, placerat non pretium ac, 
+                    elementum et arcu. Aliquam non tellus diam, vel scelerisque odio. Etiam a quam et enim vehicula feugiat posuere at dui. Phasellus at nisl quam. Integer nisi mi, varius vitae placerat viverra, dapibus vitae massa. Nullam ut orci vitae nisi ornare aliquam in eget orci.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        let box_1 = document.querySelector(".html"),
+            box_2 = document.querySelector(".css"),
+            box_3 = document.querySelector(".javascript"),
+            box_4 = document.querySelector(".Jquery"),
+            sec_1 = document.getElementById("sec_1"),
+            sec_2 = document.getElementById("sec_2"),
+            sec_3 = document.getElementById("sec_3"),
+            sec_4 = document.getElementById("sec_4");
+
+
+        sec_1.addEventListener("click",function(){
+            active(box_1,box_2,box_3,box_4);
+            color(sec_1,sec_2,sec_3,sec_4);
+        });
+
+        sec_2.addEventListener("click",function(){
+            active(box_2,box_1,box_3,box_4);
+            color(sec_2,sec_1,sec_3,sec_4);
+        });
+
+        sec_3.addEventListener("click",function(){
+            active(box_3,box_1,box_2,box_4);
+            color(sec_3,sec_2,sec_1,sec_4);
+        });
+
+        sec_4.addEventListener("click",function(){
+            active(box_4,box_1,box_2,box_3);
+            color(sec_4,sec_3,sec_2,sec_1);
+        });
+
+        function active(a,b,c,d){
+            a.classList.add("active");
+            b.classList.remove("active");
+            c.classList.remove("active");
+            d.classList.remove("active");
+        }
+
+        function color(a,b,c,d){
+            a.style.background = "#262626";
+            a.style.color = "#cccccc";
+            b.style.background = "none";
+            b.style.color = "#262626";
+            c.style.background = "none";
+            c.style.color = "#262626";
+            d.style.background = "none";
+            d.style.color = "#262626";
+        }
+    
+    </script>      
+
+
+
+</body>
+</html>
