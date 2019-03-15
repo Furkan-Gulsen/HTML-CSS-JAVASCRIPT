@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background: url("https://wallpaperplay.com/walls/full/0/3/d/163882.jpg");
+    background-repeat: no-repeat;
+
+    .container{
+        display: grid;
+        width: 750px;
+        height: 420px;
+        background: rgba(0,0,0,.2);
+        margin: 150px auto;
+        border-radius: 15px;
+        overflow: hidden;
+        grid-template-columns: 1.5fr 5fr;
+        grid-template-areas: 
+            "tabs boxes";
+
+        .vertical_tabs{
+            grid-area: tabs;
+            background: #262626;
+            box-shadow: inset 0px 0px 15px rgba(0,0,0,.7);
+            color: #faf7f5;
+        }
+        .tab{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            transition: .5s cubic-bezier(.57,.21,.69,3.25);
+            &:hover{
+                transform: scale(1.1);
+            }
+            &.active{
+                background: #F6EEE3;
+                color: #262626;
+                transform: scale(1.2);
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+
+        .show_box{
+            grid-area: boxes;
+            background: #F6EEE3;
+            box-shadow: inset 0px 0px 15px rgba(0,0,0,.7);
+            position: relative;
+
+            .show{
+                position: absolute;
+                width: 90%;
+                left: 50%;
+                top: 40px;
+                transform: translateX(-50%);
+
+                .image{
+                    width: 50%;
+                    height: 200px;
+                    float: left;
+                    margin: 0px 15px 0px 0px;
+                    border-radius: 10px 0px;
+                }
+                .image_1{
+                    background: url("https://images.alphacoders.com/927/927310.jpg");
+                    background-position: right;
+                    background-size: cover;
+                }
+                .image_2{
+                    background: url("https://images.alphacoders.com/660/thumb-1920-660254.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .image_3{
+                    background: url("https://images5.alphacoders.com/403/thumb-1920-403369.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .image_4{
+                    background: url("https://images3.alphacoders.com/674/674048.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .image_5{
+                    background: url("https://www.sideshow.com/product-asset/902831/feature");
+                    background-size: cover;
+                    background-position: right;
+                }
+                .image_6{
+                    background: url("https://images2.alphacoders.com/971/971653.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .image_7{
+                    background: url("http://www.laprensalibre.cr/files/noticias/images/detail/656086486_ant_man_hd_wallpapers.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .image_8{
+                    background: url("https://stmed.net/sites/default/files/black-panther-wallpapers-29427-7479210.png");
+                    background-size: cover;
+                    background-position: center;
+                }
+                h2{
+                    font-size: 28px;
+                    color: #262626;
+                    margin-top: 0px;
+                }
+                .info{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:750px){
+    body{
+
+        .container{
+            display: grid;
+            width: 100%;
+            min-height: 850px;
+            grid-template-rows: 1.5fr 5fr;
+            grid-template-columns: 1fr;
+            border-radius: 15px;
+            overflow: hidden;
+            grid-template-areas: 
+                "tabs"
+                "boxes";
+
+            .vertical_tabs{
+                grid-area: tabs;
+                height: 410px;
+            }
+            .show_box{
+                grid-area: boxes;
+                position: relative;
+                
+
+            }
+
+        }
+    }
+}
