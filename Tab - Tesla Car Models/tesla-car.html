@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="tesla-car.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+  
+
+    <div class="container">
+        <h2></h2>
+        <div class="model model_x"  id="model_x">
+          <h2>Tesla Model X</h2>
+        </div>
+        
+        <div class="model model_s" id="model_s" >
+            <h2>Tesla Model S</h2>
+        </div>
+
+        <div class="model model_y" id="model_y">
+            <h2>Tesla Model Y</h2>
+        </div>
+
+        <div class="bottom_tabs">
+            <div class="tab" onclick="tesla_car(event,'model_x')">Model X</div>
+            <div class="tab" onclick="tesla_car(event,'model_s')">Model S</div>
+            <div class="tab" onclick="tesla_car(event,'model_y')">Model Y</div>
+        </div>
+
+
+    </div>
+
+
+<script>
+
+    function tesla_car(evt,car){
+
+      let model = document.getElementsByClassName("model");
+      for(let i=0; i < model.length; i++){
+         model[i].style.display = "none";
+      }
+      
+      let tab = document.getElementsByClassName("tab");
+      for(let i=0; i < tab.length; i++){
+         tab[i].className = tab[i].className.replace(" active","");
+      }
+      document.getElementById(car).style.display = "block";
+      evt.currentTarget.className += " active";
+
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+
+    .container{
+        width: 750px;
+        height: 450px;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 40px 100px 3px black;
+    }
+    .model_x{
+        position: absolute;
+        background: url("https://4-images.motorcar.com/portals/blog/motorcar/244/1024/1903.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 90%;
+    }
+    .model_s{
+        position: absolute;
+        background: url("https://www.tesla.com/tesla_theme/assets/img/models/v1.0/section-hero-background.jpg?20180111");
+        background-size: cover;
+        width: 100%;
+        height: 90%;
+        background-position: center;
+    }
+    .model_y{
+        position: absolute;
+        background: url("https://cdn.motor1.com/images/mgl/LEKjM/s3/tesla-model-y.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 90%;
+    }
+    h2{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        color: #fff;
+        text-shadow: 0px 0px 5px black;
+    }
+    .bottom_tabs{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+
+        div{
+            position: relative;
+            display: block;
+            float: left;
+            width: 33.333%;
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            box-sizing: border-box;
+            color: #262626;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover{
+                background: rgb(226, 226, 226);
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 0px;
+                background:#262626;
+                transition: .5s;
+            }
+            &.active:before{
+                height: 50px;
+                opacity: .7;
+            }
+        }
+    }
+}
