@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+.sidebar{
+    position: relative;
+    width: 300px;
+    background: #8A4C55;
+    height: 100vh;
+    font-family: 'Titillium Web', sans-serif;
+    left: -300px;
+    transition: 1s;
+    &.scroll{
+        left: 0px;
+    }
+
+    .hamburger_icon{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        right: -50px;
+        cursor: pointer;
+        .icon{
+            position: relative;
+            width: 40px;
+            height: 7px;
+            top: 20px;
+            left: 5px;
+            background:#8A4C55;
+            transition: .4s;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 7px;
+                top: -10px;
+                background:#8A4C55;
+                transition: .6s;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 7px;
+                top: 10px;
+                background:#8A4C55;
+                transition: .6s;
+            }
+        }
+        &.active{
+            .icon{
+                background: none;
+                left: -50px;
+                &:before{
+                    top: 5px;
+                    transform: rotate(45deg);
+                    background: #ffac1d;
+                }
+                &:after{
+                    top: 5px;
+                    transform: rotate(-225deg);
+                    background: #ffac1d;
+                }  
+            }
+        }
+        
+    }
+
+    .sidebar-header{
+        margin-bottom: 40px;
+        padding-top: 40px !important;
+
+        img{
+            width: 60px;
+            height: 60px;
+            background-size: cover;
+        }
+        h4{
+            color: #f9f9eb;
+        }
+    }
+
+    .sidebar-search{
+            overflow: hidden;
+            height: 40px;
+        .input-group-prepend{
+            span{
+                border-radius: 0px !important;
+                background-color: #ffac1d;
+                border:none;
+                box-shadow: inset -5px 0px 3px rgba(0,0,0,.25);
+                transition:1s;
+                width: 40px;
+                height: 40px;
+                z-index: 99;
+                cursor: pointer;
+                .fas{
+                    color: #f9f9eb !important;
+                    font-size: 20px;
+                }
+                &:hover{
+                    box-shadow: inset -5px 0px 3px rgba(0,0,0,.50);
+                }
+                &:active{
+                    position: absolute;
+                    width: 300px;
+                }
+            }
+        }
+        .search-box{
+            border-radius: 0px !important;
+            border-bottom: 1px solid #ffac1d;
+            border-top: 1px solid #ffac1d;
+            border-left: none;
+            border-right: none;
+            height: 40px;
+            &:focus{
+                box-shadow: 0px 0px 10px #262626;
+            }
+        }
+    }
+
+    .sidebar-tag{
+        height: 180px;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        li{
+            height: 36px;
+            cursor: pointer;
+            display: block;
+            &.act{
+                display: none !important;
+            }
+        }
+        
+    }
+
+    .sidebar-menu{
+        .list-group{
+            
+            li{
+                background: #D97A7A;
+                color: #f9f9eb;
+                cursor: pointer;
+                transition: .5s;
+                &:hover{
+                    box-shadow: inset 0px 0px 20px rgba(0,0,0,.3)
+                }
+                &:active{
+                    background: #8A4C55
+                }
+            }
+            #drop_list{
+                display: none;
+
+                li{
+                    position: relative;
+                    left: -61px;
+                    top: 15px;
+                    width: 144%;
+                    text-indent: 20px;
+                    background: rgb(169, 95, 95);
+                }
+            }
+        }
+    }
+}

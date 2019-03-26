@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <section class="sidebar">
+        <div class="hamburger_icon">
+            <div class="icon"></div>
+        </div>
+        <div class="sidebar-header px-5">
+            <div class="row">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" alt="">
+                <h4 class="d-flex align-items-center px-2">Truecodes</h4>
+            </div>
+        </div>
+        <div class="sidebar-search">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                    aria-hidden="true"></i></span>
+                </div>
+                <input onkeyup="searchFunction()"  id="search" type="text" class="form-control search-box" placeholder="Search" aria-label="Search">
+            </div>
+        </div> 
+
+        <div class="sidebar-tag">
+            <ul id="tags" class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">HTML</a> 
+                    <span class="badge badge-warning badge-pill text-light">14</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">CSS</a> 
+                    <span class="badge badge-warning badge-pill text-light">9</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">JavaScript</a> 
+                    <span class="badge badge-warning badge-pill text-light">25</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">JQuery</a> 
+                    <span class="badge badge-warning badge-pill text-light">17</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Bootstrap</a> 
+                    <span class="badge badge-warning badge-pill text-light">5</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Angular</a> 
+                    <span class="badge badge-warning badge-pill text-light">10</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Node.js</a> 
+                    <span class="badge badge-warning badge-pill text-light">14</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Mongodb</a> 
+                    <span class="badge badge-warning badge-pill text-light">9</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Vue.js</a> 
+                    <span class="badge badge-warning badge-pill text-light">25</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">JQuery</a> 
+                    <span class="badge badge-warning badge-pill text-light">17</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Ember.js</a> 
+                    <span class="badge badge-warning badge-pill text-light">5</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Meteor</a> 
+                    <span class="badge badge-warning badge-pill text-light">10</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Polymer</a> 
+                    <span class="badge badge-warning badge-pill text-light">5</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">SQL</a> 
+                    <span class="badge badge-warning badge-pill text-light">10</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">PHP</a> 
+                    <span class="badge badge-warning badge-pill text-light">5</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">mySQL</a> 
+                    <span class="badge badge-warning badge-pill text-light">10</span>
+                </li>
+                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <a href="#" class="nav-link">Python</a> 
+                    <span class="badge badge-warning badge-pill text-light">10</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-menu mt-5">
+            <div class="container">
+                <ul class="list-group">
+                  <li class="list-group-item">HOME</li>
+                  <li class="list-group-item">SERVICES</li>
+                  <li class="list-group-item dropdown-toggle" id="dropdown_but">ORDERS
+                      <ul id="drop_list" class="dropdown-list">
+                        <li class="list-group-item">Dropdown 1</li>
+                        <li class="list-group-item">Dropdown 2</li>
+                        <li class="list-group-item">Dropdown 3</li>
+                      </ul>
+                  </li>
+                  <li class="list-group-item">ABOUT</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+
+        $(document).ready(function(){
+            $("#dropdown_but").click(function(){
+                $("#drop_list").toggle(500)
+            })
+            $(".hamburger_icon").click(function(){
+                $(".hamburger_icon").toggleClass("active");
+                $(".sidebar").toggleClass("scroll");
+            })
+        });
+
+
+        function searchFunction(){
+            let search,tags,filter,tag,a,i;
+            search = document.getElementById("search");
+            filter = search.value.toUpperCase();
+            ul = document.getElementById("tags");
+            li = ul.getElementsByTagName("li");
+
+            for(i = 0; i < li.length; i++){
+                a = li[i].querySelectorAll("a")[0];
+                if( a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                    $(li[i]).removeClass("act");
+                }
+                else{
+                    $(li[i]).addClass("act");
+                }
+            }           
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
