@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container mt-5 border p-3">
+        <h2 class="title text-center">LOGIN SYSTEM</h2>
+        <input type="text" id="username" class=" my-2 form-control text-center" placeholder="USERNAME">
+        <input type="password" id="password" class=" my-2 form-control text-center" placeholder="PASSWORD">
+        <button id="but" class="btn btn-danger btn-block">LOGIN</button>
+        <div id="result" class="form-block text-center mt-4"></div>
+    </div>
+
+  <script>
+
+    $(document).ready(function(){
+
+        $("#but").click(function(){
+
+            let username = $("#username").val(),
+            password = $("#password").val();
+
+            const setPromise = new Promise(function(resolve,reject){
+                if(username == "truecodes" && password == "codeblogger"){
+                    resolve("Welcome " + username );
+                }else{
+                    reject("Check your username and password again.")
+                }
+            })
+
+            setPromise.then(function(message){
+                alert(message);
+            }).catch(function(a){
+                alert(a)
+            })
+        })
+
+    })
+    
+
+  </script>
+
+</body>
+</html>
