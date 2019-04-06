@@ -1,0 +1,18 @@
+#book_list {
+  background: rgba(0, 0, 0, 0.75);
+  width: 92.5%;
+  height: 385px;
+  left: 25px;
+  overflow-y: scroll;
+  border-radius: 7.5px; }
+  #book_list::-webkit-scrollbar {
+    display: none; }
+  #book_list table {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 7.5px; }
+    #book_list table thead {
+      color: #1a1a1a; }
+    #book_list table tbody {
+      color: #262626; }
+
+/*# sourceMappingURL=book_list.css.map */

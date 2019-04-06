@@ -1,0 +1,22 @@
+#insertion_section {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  padding: 15px 10px 15px 10px;
+  width: 100%; }
+  #insertion_section .form-group {
+    width: 90%;
+    margin-left: 10%; }
+    #insertion_section .form-group input, #insertion_section .form-group label {
+      width: 90%; }
+    #insertion_section .form-group input {
+      opacity: .20;
+      transition: .5s;
+      outline: none; }
+    #insertion_section .form-group #two-section {
+      margin-left: -7.5%; }
+      #insertion_section .form-group #two-section input {
+        width: 85%; }
+    #insertion_section .form-group button {
+      margin-left: -5%; }
+
+/*# sourceMappingURL=insertion_section.css.map */

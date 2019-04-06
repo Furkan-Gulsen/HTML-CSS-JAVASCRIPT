@@ -1,0 +1,23 @@
+#book_list{
+    background: rgba(0,0,0,.75);
+    width: 92.5%;
+    height: 385px;
+    left: 25px;
+    overflow-y: scroll;
+    border-radius: 7.5px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    table{
+        background: rgba(256,256,256,.75);
+        border-radius: 7.5px;
+        
+        thead{
+            color: #1a1a1a;
+        }
+        tbody{
+            color: #262626;
+        }
+        
+    }
+}
