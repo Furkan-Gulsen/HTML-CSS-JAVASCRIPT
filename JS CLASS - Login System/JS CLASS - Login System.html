@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CARD GAME</title>
+    <link rel="stylesheet" type="text/css" href="JS CLASS - Login System.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div id="login_table">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <input type="text" class="form-control" id="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-lock-open"></i></span>
+          </div>
+          <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+      <button id="login" class="btn btn-dark btn-lg btn-block">LOGIN</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="message"></p>
+        </div>
+    </div>
+
+
+
+<script>
+
+  class Users{
+    constructor(username,password){
+      this.username = username;
+      this.password = password;
+    }
+    control_variable(control_username,control_password){
+      this.control_username = control_username;
+      this.control_password = control_password;
+    }
+    control(){
+      if(this.control_username == this.username && this.control_password == this.password){
+        $(".message").text(`WELCOME ${$('#username').val()}`)
+      }else{
+        $(".message").text('You have entered incorrectly.')
+      }
+    }
+  };
+
+  let User_variables = {
+    // username : password
+    "furkan" : 'gulsen',
+    "maria"  : "allen",
+    "bob"    : "quenn",
+    'rick'   : 'rick123'
+  }
+
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  $("#login").click(function(){
+    let user = new Users($('#username').val(), $('#password').val());
+    var password = User_variables[$('#username').val()]
+    user.control_variable($('#username').val(),password);
+    user.control();
+    modal.style.display = "block";
+  });
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+</script>
+</body>
+</html>
