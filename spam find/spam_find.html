@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CARD GAME</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/main.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div id="box">
+      <h1 class="text-center mt-5 pb-3">Lorem Ipsum</h1>
+      <p id="text" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac hendrerit neque.
+        Phasellus cursus at neque in tempor. Vestibulum ante ipsum primis in faucibus 
+        orci luctus et ultrices posuere cubilia Curae; Maecenas lacinia ex ac nulla 
+        ullamcorper feugiat. Maecenas feugiat massa non mollis pellentesque. Integer 
+        malesuada nec nisi id pellentesque. Integer luctus, mauris vel volutpat commodo, 
+        arcu ligula viverra metus, ac tempor purus mi eget leo. Pellentesque bibendum 
+        ex quis blandit iaculis. Maecenas suscipit, arcu et mattis imperdiet, arcu ipsum
+        lacinia tortor, eget pulvinar felis elit nec leo. Nunc quam dolor, pulvinar sit 
+        amet laoreet ac, varius pulvinar nisi. Praesent placerat faucibus mauris, sed 
+        ultricies libero finibus in. Nulla fringilla mattis quam, tincidunt congue libero 
+        auctor nec. Duis at luctus augue. Donec bibendum ornare felis, sed accumsan nulla.
+        In nec sem posuere, luctus ante sed, porttitor massa.
+
+        In neque quam, vehicula quis lectus eget, elementum tincidunt nunc. Praesent 
+        commodo commodo urna fringilla tristique. Nunc ut lobortis enim. Etiam auctor 
+        sem quis quam venenatis convallis. Sed ex felis, pharetra eu maximus eget, 
+        euismod at elit. Duis massa nunc, fermentum a purus eget, suscipit vulputate 
+        dolor. Donec varius dignissim mattis. Vestibulum elementum in arcu cursus iaculis. 
+        Maecenas ullamcorper massa non eros egestas aliquam facilisis eget magna. Duis 
+        suscipit sem sit amet mauris ullamcorper aliquam ut non felis. Cras rhoncus 
+        consequat neque, vel elementum turpis ullamcorper sit amet. Interdum et malesuada 
+        fames ac ante ipsum primis in faucibus.
+        
+        Nulla et fringilla mauris, sit amet fermentum lacus. Pellentesque sed nunc a quam 
+        convallis elementum. Vivamus vulputate elit et ante tristique, eget iaculis orci 
+        ultrices. Donec aliquam magna nec efficitur facilisis. Aenean dapibus nec diam 
+        eu bibendum. Sed at purus id augue semper semper. Sed non risus mauris. Proin 
+        finibus ac erat vitae mollis.
+        
+        Donec sit amet dapibus arcu. Donec libero felis, suscipit vel mi ac, auctor 
+        gravida ante. Sed vehicula pharetra tempor. Suspendisse elementum facilisis 
+        odio in pulvinar. Fusce accumsan quis sem vitae tempus. Phasellus ultrices 
+        turpis auctor magna fermentum, at mollis ligula posuere. Suspendisse a elit 
+        a diam varius imperdiet et non tortor. Sed malesuada suscipit fringilla.
+        Proin mollis tincidunt velit, et bibendum diam pellentesque ac. Duis dapibus 
+        mi non massa auctor commodo. Cras imperdiet ipsum in libero pretium, ac ornare 
+        lacus consequat. Praesent eleifend quam at mauris iaculis vulputate. Vestibulum 
+        in velit a arcu feugiat consequat vitae ac dolor. Suspendisse vitae nunc tellus.
+        
+        Integer euismod consequat ex sed feugiat. Morbi sed sem in ipsum scelerisque 
+        elementum. Phasellus et tristique odio. Ut lacus dolor, tincidunt eget magna 
+        sed, dignissim lobortis risus. Vivamus volutpat vel dui ut elementum. Maecenas 
+        ultricies, erat sed egestas finibus, tellus nibh hendrerit sem, id imperdiet 
+        est lorem sit amet lacus. Quisque scelerisque nisl id sapien porttitor, tristique 
+        pharetra mi iaculis. Vestibulum ac arcu lobortis, posuere dolor non, condimentum 
+        est. Nam non efficitur nunc, fringilla sollicitudin ante. Curabitur quis metus 
+        tellus truecodes codeblogger codeblogger xxx xxx xxx.
+      </p>
+      <button type="button" class="btn btn-danger btn-lg btn-block">FIND SPAM</button>
+    </div>
+  </div>
+
+<script>
+
+function findSpam(txt) {
+  let spamWords = ["codeblogger", "truecodes", "metus", "xxx"];
+  let totalSpam = 0;
+  if (!txt) return `no string...`;
+  spamWords.forEach(word => {
+    var re = new RegExp(word, "g");
+    console.log(re);
+    totalSpam += txt.toLowerCase().match(re).length;
+  })
+  return totalSpam;
+};
+
+$("button").click(function() {
+  let spamWords = ["codeblogger", "truecodes", "metus", "xxx"];
+  var source = $("p").text();
+  var newSource = source;
+  for(let i = 0; i < spamWords.length; i++){
+    if(source.toLowerCase().includes(spamWords[i])){
+     newSource = newSource.replace(spamWords[i], '<span style="color:red;text-decoration:underline;">' + spamWords[i] + '</span>');
+     result = 'This article has spam.';
+   };
+  };
+  $("#text").html(newSource);
+  alert(`Total spam: ${findSpam(source)}`);
+});
+
+
+</script>
+</body>
+</html>
