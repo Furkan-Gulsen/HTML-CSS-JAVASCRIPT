@@ -1,0 +1,101 @@
+body {
+  background-color: lightcoral;
+  width: 100%;
+  height: 100vh; }
+  body .container {
+    position: relative; }
+    body .container .clock_box {
+      position: relative;
+      top: 5rem;
+      width: 500px;
+      height: 700px;
+      margin: 0 auto; }
+      body .container .clock_box .clock {
+        width: 500px;
+        height: 500px;
+        background: transparent;
+        position: relative;
+        margin-bottom: 20px; }
+        body .container .clock_box .clock .back_circle {
+          width: 460px;
+          height: 460px;
+          background: transparent;
+          border: 10px solid #e15151;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          z-index: -1; }
+        body .container .clock_box .clock .clock_circle {
+          transition: 0.35s stroke-dashoffset;
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+        body .container .clock_box .clock .clock_text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          line-height: 60px;
+          color: #efeaea; }
+          body .container .clock_box .clock .clock_text .pomodoro_name {
+            font-size: 30px;
+            background: none;
+            border: none;
+            text-align: center;
+            color: #efeaea;
+            outline: none; }
+            body .container .clock_box .clock .clock_text .pomodoro_name ::placeholder {
+              color: #efeaea; }
+          body .container .clock_box .clock .clock_text .timer {
+            font-size: 100px; }
+      body .container .clock_box .clock_button {
+        position: relative; }
+        body .container .clock_box .clock_button .smallCircle {
+          width: 75px;
+          height: 75px;
+          background: transparent;
+          border-radius: 50%;
+          border: 5px solid rgba(239, 234, 234, 0.7);
+          cursor: pointer; }
+          body .container .clock_box .clock_button .smallCircle i {
+            font-size: 25px;
+            transition: .5s; }
+          body .container .clock_box .clock_button .smallCircle:hover i {
+            font-size: 30px; }
+        body .container .clock_box .clock_button .reload {
+          position: absolute;
+          left: 15%; }
+          body .container .clock_box .clock_button .reload:hover {
+            border: 5px solid #efeaea; }
+        body .container .clock_box .clock_button .info {
+          position: absolute;
+          left: 70%; }
+        body .container .clock_box .clock_button .bigCircle {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: transparent;
+          border-radius: 50%;
+          border: 5px solid rgba(239, 234, 234, 0.7);
+          cursor: pointer; }
+          body .container .clock_box .clock_button .bigCircle i {
+            margin-left: 5px;
+            font-size: 34px;
+            transition: .5s; }
+          body .container .clock_box .clock_button .bigCircle:hover i {
+            font-size: 39px; }
+        body .container .clock_box .clock_button .fas {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #efeaea; }
+
+/*# sourceMappingURL=style.css.map */

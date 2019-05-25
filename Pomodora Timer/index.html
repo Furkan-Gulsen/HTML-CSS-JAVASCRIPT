@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="codeblogger">
+    <meta name="keywords" content="pomodoro timer,pomodoro,work timer">
+    <meta name="description" content="Free Pomodoro Timer">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> <!-- JQuery -->
+
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="clock_box">
+            <div class="clock">
+                
+                    <svg
+                        class="progress-ring"
+                        width="500"
+                        height="500">
+                        <circle
+                        class="clock_circle"
+                        stroke="#EFEAEA"
+                        stroke-width="10"
+                        fill="transparent"
+                        r="225"
+                        cx="250"
+                        cy="250"
+                        />
+                        <circle  />
+                    </svg>
+                    <div class="back_circle"></div>
+                <div class="clock_text" >
+                    <input class="pomodoro_name" placeholder="pomodoro name"/>
+                    <p class="timer"></p>
+                </div>
+
+            </div>
+            <div class="clock_button">
+                <div class="smallCircle reload">
+                    <i class="fas fa-redo-alt"></i>
+                </div>
+                <div id="play_stop" class="bigCircle play_stop">
+                    <i style="display:block; margin-left: 22px" id="play" class="fas fa-play"></i>
+                    <i style="display:none; margin-left: 20px" id="stop" class="fas fa-pause"></i>
+                </div>
+                <div class="smallCircle info" data-toggle="modal" data-target=".bd-example-modal-sm">
+                    <i class="fas fa-info info "></i>
+                </div>
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content p-3 text-center">
+                        This application is under development. <br>
+                        You can improve it by going to github at truecodes.org.<br>
+                        ©codeblogger 
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
