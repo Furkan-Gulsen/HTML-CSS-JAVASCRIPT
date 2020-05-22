@@ -1,11 +1,11 @@
 {
   "name": "vanilla",
   "version": "1.0.0",
-  "description": "JavaScript example starter project",
-  "main": "index.html",
+  "description": "JavaScript projects",
+  "main": "calculator.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel calculator.html --open",
+    "build": "parcel build calculator.html"
   },
   "dependencies": {},
   "devDependencies": {
