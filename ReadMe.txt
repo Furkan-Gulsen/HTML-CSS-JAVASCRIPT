@@ -1,7 +1,7 @@
 HTML | Calculator
-Here a Calculator is going to be formed with HTML code.
+Calculator made in HTML
 
-Calculator Title: This is the title at the top of our application, ìHTML Calculatorî.
+Calculator Title: This is the title at the top of our application, ‚ÄúHTML Calculator‚Äù.
 Output Screen: This will be our output screen, where all text will be shown. Like the input that the user will type and the answer calculated from the user input. So, we can again break down this into two smaller pieces as shown below:
 Question Output: This will be the input given by the user.
 Answer Output: This will be the result calculated from user input.
