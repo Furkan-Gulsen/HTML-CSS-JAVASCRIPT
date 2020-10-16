@@ -5,14 +5,14 @@ body {
     align-items: center;
     margin: 0;
     font-family: sans-serif;
-    background: #262626;
+    background: #63b5bb;
 }
 .container {
     perspective:800px;
 }
 .toggle{
     position:relative;
-    border: solid 6px #8a3a00;
+    border: solid 6px #000000;
     border-radius:55px;
     transition: transform cubic-bezier(0,0,0.30,2) .4s;
     transform-style:preserve-3d;
@@ -36,7 +36,7 @@ body {
     padding:30px;
     font-size:30px;
     text-align:center;
-    color:#8a3a00;
+    color:#fff;
     cursor:pointer;
 }
 .toggle > label,
@@ -48,13 +48,13 @@ body {
     position:absolute;
     top: calc(0px - 6px);
     left:50%;
-    height:calc(100% + 12px);
+    height:calc(100% + 10px);
     width:50%;
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:30px;
-    background:#8a3a00;
+    background:#000;
     border-top-right-radius:55px;
     border-bottom-right-radius:55px;
     transform-style:preserve-3d;
@@ -62,8 +62,7 @@ body {
     transition: transform cubic-bezier(0.4,0,0.2,1) .5s;
 }
 .toggle > #flap > .content{
-    color:#262626;
+    color:#ffffff;
     transition:transform 0s linear .25s;
     transform-style:preserve-3d; 
 }
-
